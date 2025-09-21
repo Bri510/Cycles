@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER - STILLNESS & CONTEMPLATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="winter-styles.css">
+</head>
+<body>
+
+    <div class="info">
+        <div class="title">WINTER</div>
+        <div class="description">
+            Winter embraces the world in quiet reflection, where life retreats inward to find its deepest truths. In the stillness of snow and the clarity of frost, we discover that rest is not emptiness but preparation. Each bare branch holds the promise of spring, teaching us that in moments of seeming dormancy, the most profound growth takes place in silence.
+        </div>
+    </div>
+
+    <!-- Season Transition Button -->
+    <div class="season-nav">
+        <div class="season-text">continue the cycle</div>
+        <button id="nextSeason" class="season-btn" title="Next Season">→</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="winter-sketch.js"></script>
+    <script>
+        // Season transition functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const nextSeasonBtn = document.getElementById('nextSeason');
+            if (nextSeasonBtn) {
+                nextSeasonBtn.addEventListener('click', function() {
+                    // Spring -> Summer -> Autumn -> Winter -> Spring
+                    window.location.href = 'index.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
